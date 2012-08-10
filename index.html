@@ -13,31 +13,143 @@
 	<meta name="viewport" content="width=device-width">
     
     <style>
-        /* demo page styles */
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        p {
+            margin: 0;
+            font-size: 1.5em;
+            line-height: 1.5em;
+        }
+        a {
+            color: #008FD5;
+        }
+        a: hover {
+            color: #006B9F;
+        }
+        header[role="banner"] {
+            background: #273138;
+            padding: 20px 0 40px;
+            color: #fff;
+            text-align: center;
+        }
+        header a {
+            background: #008FD5;
+            padding: 5px;
+            color: #fff;
+            text-decoration: none;
+        }
+        header a:hover {
+            background: #006B9F;
+        }
+        .main {
+            width: 720px;
+            margin: 40px auto 0;
+        }
+        .expandable-list {
+            width: 320px;
+            margin: 0 auto;
+        }
+        .expandable-list > ul {
+            list-style: none;
+            padding: 0;
+        }
+        .expandable-list > ul > li {
+            background: #008FD5;
+            border-bottom: 1px solid #fff;
+            font-size: 1.5em;
+            color: #fff;
+            line-height: 1.5em;
+            text-align: center;
+        }
+        footer {
+            padding: 40px 0;
+            text-align: center;
+        }
+        footer > ul {
+            list-style: none;
+            padding: 0;
+        }
+        footer > ul > li {
+            display: inline-block;
+            padding: 0 1em;
+        }
     </style>
 	<link rel="stylesheet" href="_/css/expandablelist.css">
 </head>
 <body>
 
-    <header>
-        <h1>Header</h1>
+    <header role="banner">
+        <h1>jquery.expandablelist.js</h1>
+        <p>by <a href="http://chrisjamesbk.com">@chrisjamesbk</a></p>
     </header>
-    <div role="main">
-        <p>This is just a paragraph</p>
-        <ul>
-            <li>this is an</li>
-            <li>unordered</li>
-            <li>list</li>
-        </ul>
+    <div class="main">
+        <p>This is the demo page for my <strong>Expandable List</strong> jQuery plugin.</p>
+        <p>Fork it or download the zip from <a href="https://github.com/chrisjamesbk/expandable-list">github</a>.</p>
+        <p>I designed it to replicate the functionality on Quora profile pages. See the bottom of <a href="http://www.quora.com/David-Cole/following">David Cole's following list</a>.</p> 
+    </div>
+    <div class="main">
+        <div class="expandable-list">
+            <h2>Assorted Fruit</h2>
+            <ul class="list">
+                <li>Blackcurrant</li>
+                <li>Redcurrant</li>
+                <li>Gooseberry</li>
+                <li>Tomato</li>
+                <li>Eggplant</li>
+                <li>Guava</li>
+                <li>Lucuma</li>
+                <li>Chili pepper</li>
+                <li>Pomegranate</li>
+                <li>Kiwifruit</li>
+                <li>Grape</li>
+                <li>Cranberry</li>
+                <li>Blueberry</li>
+                <li>Pumpkin</li>
+                <li>Gourd</li>
+                <li>Cucumber</li>
+                <li>Melon</li>
+                <li>Orange</li>
+                <li>Lemon</li>
+                <li>Lime</li>
+                <li>Grapefruit</li>
+                <li>Blackberry</li>
+                <li>Raspberry</li>
+                <li>Boysenberry</li>
+                <li>Pineapple</li>
+                <li>Fig</li>
+                <li>Mulberry</li>
+                <li>Hedge apple</li>
+                <li>Apple</li>
+                <li>Rose hip</li>
+                <li>Strawberry</li>
+            </ul>
+        </div>
     </div>
     <footer>
-        <p>Footer content</p>
+        <ul>
+            <li><a href="https://twitter.com/chrisjamesbk">Twitter</a></li>
+            <li><a href="http://chrisjamesbk.com">Website</a></li>
+            <li><a href="http://www.linkedin.com/in/chrisjames03">LinkedIn</a></li>
+        </ul>
     </footer>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="_/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
 
-    <script src="_/js/expandablelist.js"></script>
+    <script src="_/js/jquery.expandablelist.js"></script>
+    
+    <script>
+        $('div.expandable-list').expandableList({
+            showItems: 5,                   // default = 10
+            showMoreItems: 10,              // default = 10
+            expandText: 'Show More Fruit'   // default = 'More'
+        });
+    </script>
 
 </body>
 </html>
