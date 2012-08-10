@@ -1,0 +1,20 @@
+.expand-list {
+    margin-bottom: 16px;
+    a {
+        display: block;
+        background-color: @lightest-grey;
+        background-image: -moz-linear-gradient(center top , @lightest-grey, @chads-skin);
+        border: 1px solid @extra-light-grey;
+        color: @blackish;
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+        height: 18px;
+        line-height: 18px;
+        padding: 2px 7px;
+        .rounded-corners(4px);
+        &:hover {
+            color: @dark-grey;
+        }
+    }
+}
